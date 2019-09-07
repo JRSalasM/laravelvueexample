@@ -14,6 +14,7 @@
                             <li>
                                 <router-link :to="{name: 'home'}">Home</router-link>
                                 <router-link :to="{name: 'blog'}">Blog</router-link>
+                                <router-link :to="{name: 'profile', params:{ username: 'pepeman' }}">profile</router-link>
                             </li>
                         </ul>
                     </div>

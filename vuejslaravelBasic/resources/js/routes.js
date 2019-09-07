@@ -16,9 +16,15 @@ export default new Router({
             component: require('./views/Blog.vue').default
         },
         {
-            path: ':slug',
+            path: '/:slug',
             name: 'post',
             component: require('./views/Post.vue').default,
+            props: true
+        },
+        {
+            path: '/profile/user/:username',
+            name: 'profile',
+            component: require('./views/profile.vue').default,
             props: true
         },
         {

@@ -8,16 +8,22 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="cold-md-8">
-                    <p v-text="post.excerpt"></p>
-                    <div v-html="post.body"></div>
+                    <div v-if="post">
+                        <p v-text="post.excerpt"></p>
+                        <div v-html="post.body"></div>
+                    </div>
+                    <div class="text-center m-5" v-else>
+                        <h2>POST NO ENCONTRADO</h2>
+                    </div>
                     <hr>
                     <h1>Otros acticulos</h1>
                     <posts></posts>
-                </div>
+                </div>                                
             </div>  
         </div>        
     </div>
 </template>
+
 <script>
 import axios from 'axios';
 export default {
